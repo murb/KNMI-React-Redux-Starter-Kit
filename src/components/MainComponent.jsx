@@ -9,9 +9,3 @@ export default class MainComponent extends Component {
       </div>);
   }
 }
-
-MainComponent.propTypes = {
-  count: PropTypes.number.isRequired,
-  dispatch: PropTypes.func.isRequired,
-  actions: PropTypes.object.isRequired
-};

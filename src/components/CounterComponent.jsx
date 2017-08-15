@@ -1,20 +1,30 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import countActions from '../actions/countActions'
 
-export default class CounterComponent extends Component {
+import { connect } from 'react-redux';
+
+class CounterComponent extends Component {
   render () {
-    const { count, dispatch, actions } = this.props;
+    const { count, dispatch } = this.props;
     return (
       <div>
-        {count}
-        <button id='incrementButton' onClick={() => dispatch(actions.incrementCounter())}>Increment</button>
-        <button id='doubleButton' onClick={() => dispatch(actions.doubleCounter())}>Double</button>
+        <div className="promote">
+        <p>{count}</p>
+        </div>
+        <button className="small button" id='incrementButton' onClick={() => dispatch(countActions.incrementCounter())}>Increment</button>
+        <button className="small button" id='doubleButton' onClick={() => dispatch(countActions.doubleCounter())}>Double</button>
       </div>);
   }
 }
 
+function mapStateToProps(state) {
+  return { count: state.countState.count }
+}
+
 CounterComponent.propTypes = {
   count: PropTypes.number.isRequired,
-  dispatch: PropTypes.func.isRequired,
-  actions: PropTypes.object.isRequired
+  dispatch: PropTypes.func.isRequired
 };
+
+export default connect(mapStateToProps)(CounterComponent);
