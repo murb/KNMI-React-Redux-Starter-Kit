@@ -1,0 +1,127 @@
+// OO-CSS principle: separate containers from content
+@include foundation-grid;
+
+aside {
+  .button {
+    width: 100%;
+  }
+  background: $background-lightgrey;
+  .aside-content {
+    padding: 0.9375rem 0;
+  }
+  &.faux-left-margin {
+    border-left: 1rem solid $background;
+  }
+  h3 {
+    margin-top: 0.5em;
+    color: $dark-grey;
+  }
+}
+
+.hero {
+  @include grid-row($behavior: false);
+  font-size: 1.2em;
+  text-align: center;
+  padding: 6% 8.3%;
+  max-width: $knmi-width;
+  margin-bottom: 2em;
+  &.secondary {
+    text-align: left;
+    padding: 3% 8.3%;
+  }
+}
+
+.pagehead {
+  @include grid-row($behavior: false);
+  max-width: $knmi-max-width;
+  position: relative;
+  padding-top: 12%;
+}
+
+$active-tab-background: $white;
+.react-tabs {
+  float: left;
+  width: 100%;
+  margin-bottom: 2em;
+  .header {
+    border-bottom: 1px solid $line-grey;
+    float: left;
+    width: 100%;
+    ul {
+      width: 100%;
+      list-style: none;
+      margin: 0;
+      padding:0;
+      float: left;
+      li {
+        float: left;
+        padding: 5px 1.2em;
+        margin: 0 0 -1px 0;
+        background: $background;
+        font-size: 1.22em;
+        &.selected {
+          border: 1px solid $line-grey;
+          border-bottom: 1px solid $active-tab-background;
+          background: $active-tab-background;
+        }
+      }
+    }
+  }
+  .tab-content {
+    background: $active-tab-background;
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid $line-grey;
+    padding: 0.825em 0;
+    table {
+      width: 100%;
+    }
+    .react-tab.hidden {
+      display: none;
+    }
+  }
+}
+
+.list.infinite {
+  max-height: 22em;
+  border-bottom: 1px solid $line-grey;
+  background-image: linear-gradient(to top, $line-grey 0px, white 3px, white);
+  margin-bottom: 0.5em;
+  &.finished {
+    background-image: none;
+  }
+  overflow: auto;
+  table {
+    position: relative;
+    width: 100%;
+    td {
+      max-width: 20em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    tfoot {
+      display: block;
+      z-index: 5;
+      tr {
+        width: 100%;
+        display: block;
+
+        th {
+          float: left;
+          display: block;
+        }
+      }
+      background: $background-lightgrey;
+      width: 100%;
+      display: table-footer-group;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+
+    }
+  }
+}
+
+.panel {
+  background: $background-lightgrey;
+}

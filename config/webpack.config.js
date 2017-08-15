@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const project = require('./project.config');
 const debug = require('debug')('app:config:webpack');
@@ -19,6 +20,7 @@ const webpackConfig = {
       'node_modules'
     ],
     extensions : ['.js', '.jsx', '.json'],
+    alias: { 'foundation': 'foundation-sites/scss' },
     enforceExtension : false
   },
 

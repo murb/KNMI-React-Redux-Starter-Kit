@@ -1,0 +1,79 @@
+.react-tagsinput {
+  background: $input-background;
+  border: $input-border;
+  margin: 0 0 $form-spacing;
+
+  box-shadow: $input-shadow;
+  border-radius: $input-radius;
+  transition: $input-transition;
+  cursor: text;
+  overflow: hidden;
+  // padding: 0 ($form-spacing / 2)
+}
+
+.react-tagsinput--focused {
+  border: $input-border-focus;
+  box-shadow: $input-shadow-focus;
+}
+
+.react-tagsinput-tag {
+  background-color: #fff;
+  border: $input-border;
+  display: inline-block;
+  font-size: $input-font-size;
+  padding: $form-spacing / 4 $form-spacing / 2;
+  margin-left: $form-spacing / 2;
+  // margin-right: $form-spacing / 2;
+  margin-top: $form-spacing / 2;
+  margin-bottom: $form-spacing / 2;
+}
+
+.react-tagsinput-remove {
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    color: inherit;
+  }
+}
+
+.react-tagsinput-tag a::before {
+  content: " ×";
+}
+
+.react-tagsinput-input, .react-tagsinput-input:focus {
+  border: 0 none;
+  box-shadow: none;
+  outline: none;
+  padding: ($form-spacing / 2);
+  margin: 0;
+  min-width: 25%;
+  font-size: $input-font-size;
+  text-align: left;
+  background: transparent;
+  outline: none;
+}
+
+.react-autosuggest__container {
+  display: inline-block;
+  width: 100%;
+}
+
+.react-autosuggest__suggestions-container {
+  list-style-type: none;
+  top: 53px;
+  width: 100%;
+  margin: 0;
+  padding: $form-spacing / 2;
+  list-style-type: none;
+  border-top: 1px solid #aaa;
+  background-color: #fff;
+  font-size: $input-font-size;
+  z-index: 2;
+}
+
+.react-autosuggest__suggestion--focused {
+  background-color: $primary-color;
+  color: $white;
+}

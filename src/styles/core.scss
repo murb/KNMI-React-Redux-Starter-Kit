@@ -1,49 +1,43 @@
-$radius-size: 0.19rem;
-$shadow: 0.06rem 0.125rem 0.125rem rgba(0,0,0,0.3);
-$inverse-inactive-color: rgba(255, 255, 255, 0.7);
-$inverse-hover-color: #5bc0de;
-$inverse-active-color: white;
-$inverse-inactive-color: #cef;
-$ux-interactive-color: #017daf;
-$ux-interactive-color-checked: #3299cb;
-$ux-interactive-color-active: #017daf;
-$ux-interactive-border-highlight-color: #018cc8;
-$ux-interactive-border-shadow-color: #01729b;
-$ux-interactive-hover-color: #015f8c;
+/* - */
 
-html {
-  box-sizing: border-box;
+@import 'base';
+@import 'fonts';
+@import '~foundation/foundation';
+@import 'foundation-settings';
+
+@import 'component_specific/select.scss';
+
+@import 'oo_containers';
+@import 'oo_content';
+@import 'oo_skin';
+@import 'oo_structure';
+
+@import 'html-elements';
+@import 'calendar';
+
+
+.user-area {
+  float: right;
+  font-size: 14px;
+  margin-top: 2em;
+
+  .user-menu {
+
+    ul {
+      list-style: none;
+    }
+  }
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+.promote {
+  font-family: 'RijksSerif', Times, Serif;
+  font-size: 1.125em;
+  margin: 1em 0;
 }
-.canvasLoadingOverlay.canvasDisabled,.canvasLoadingOverlay.timeOverlay.canvasDisabled {
-  background-color: rgba(50, 50, 50, 0.4);
+
+.show_no_longer_candidate {
+  display: none;
 }
-.canvasLoadingOverlay.timeOverlay{
-  margin-top: -800px;
-  display: block;
-  background-color: rgba(50, 50, 50, 0);
-  width: 480px;
-  height: 800px;
-  z-index: 10000;
-}
-.canvasLoadingOverlay {
-  margin-top: -670px;
-  display: block;
-  background-color: rgba(50, 50, 50, 0);
-  width: 480px;
-  height: 670px;
-  z-index: 10000;
-}
-#root {
-  height: inherit;
-  width: inherit;
-  background-color: #f2fbff;
-}
+
+
+

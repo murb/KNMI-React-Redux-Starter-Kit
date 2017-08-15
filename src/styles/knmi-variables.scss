@@ -1,0 +1,43 @@
+$knmi-width: 1200px;
+$knmi-max-width: 1400px;
+
+
+$white: #fff;
+$background: $white;
+$strongline-width: 5px;
+
+
+
+// n shades of grey
+
+$off-black: #1A1A1A;
+$dark-grey: #3A3A3A;
+$grey: #7E7E7E;
+$breadcrumb-grey: #979797;
+
+$strongline-grey: #D8D8D8;
+$line-grey: #DEDEDE;
+$inputline-grey: #E6E6E6;
+$background-grey: $inputline-grey;
+$background-lightgrey: #F3F3F3;
+
+// n shades of blue
+
+$logo-blue: #0D4074;
+$knmi-blue: #01689B;
+$background-darkblue: #0D415A;
+$background-knmiblue: $knmi-blue;
+$background-lightblue: #CCE0F1;
+$background-lightestblue: #E5F0F9;
+
+$knmi-red: #CE1F00;
+$knmi-lighterred: #D3361A;
+
+$knmi-green: #2E9634;
+$greyish-light-green: #9BC285;
+
+$knmi-yellow: #FFDE3C;
+$knmi-lighteryellow: #FFE959;
+
+$warning-color: $knmi-red;
+$ok-color: $knmi-green;

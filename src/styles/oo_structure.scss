@@ -1,0 +1,276 @@
+// OO-CSS principle: separate structure from skin (foundation = structure)
+
+
+//
+// FOUNDATION OVERRIDES
+//
+
+.button {
+  line-height: 1.5em;
+  img {
+    max-width: 1.5em;
+  }
+  img.icon {
+    float: right;
+    margin-left: 0.5em;
+  }
+}
+
+.top-bar {
+  border-bottom: 10px $background-lightblue solid;
+  margin-bottom: 1em;
+  .menu-text {
+    padding: 0.2em 30px 0.2em 30px;
+    font-size: 1.25em;
+    width: 100%;
+    float: left;
+    background: $background-lightestblue;
+  }
+
+  ul.menu {
+    padding: 18px 0 0 30px;
+    float: left;
+    font-weight: bold;
+    li {
+      margin-bottom: 0
+    }
+    a {
+      color: $white;
+      transition: background 0.2s linear;
+      font-size: 0.9em;
+      &.active, &:hover {
+        background: $background-lightblue;
+        color: $off-black;
+        outline: none;
+      }
+      &:focus {
+        background: none;
+        color: $background-lightblue;
+      }
+      &.active:focus {
+        background: $background-lightblue;
+        color: $off-black;
+        outline: none;
+      }
+    }
+  }
+}
+
+//
+// Dropdown
+//
+$dropdownBackground: #fff;
+$dropdownForeground: #222;
+$dropdownBorder: $line-grey;
+$tipHeight: 0.5em;
+
+.dropdown-trigger {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  float: left;
+  padding: 0 1px;
+  display: inline;
+  .dropdown-panel, .dropdown-menu {
+      min-width: 99.5%;
+  }
+}
+
+.dropdown-panel, .dropdown-menu {
+  box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+
+  display: block;
+  position: absolute;
+  top: 1.9em;
+  background: $dropdownBackground;
+  padding: $global-padding;
+
+  color: $dropdownForeground;
+  font-weight: normal;
+  border: 1px solid $dropdownBorder;
+  border-radius: 1px;
+  z-index: 100;
+  font-size: 0.825em;
+
+
+}
+
+.dropdown-menu {
+  .ranges, .navigation {
+    float: left;
+  }
+  .left {
+    margin-left: $global-padding;
+    float: left;
+  }
+  .right, .custom {
+    margin-left: $global-padding;
+    float: right;
+  }
+  form {
+    float: left;
+  }
+
+}
+
+
+.default-hidden.dropdown-panel {
+  display: none;
+  &:hover, &:focus {
+    outline: 0 none;
+    .reactdropdown {
+      display: block;
+    }
+  }
+}
+
+.ranges ul, .navigation ul {
+  @include menu-base;
+  @include menu-direction('vertical');
+
+  li {
+    padding: $menu-item-padding;
+    cursor: pointer;
+    &:hover {
+      color: $white;
+      background-color: $knmi-blue;
+      text-decoration: none;
+    }
+  }
+}
+
+.dropdown-panel ul.menu {
+  li {
+    a {
+      text-decoration: none;
+      &:hover, &.active {
+        color: $white;
+        background: $knmi-blue;
+      }
+    }
+  }
+}
+
+.range_inputs, .buttons {
+  margin-top: 1em;
+  border-top: $line-grey 1px solid;
+  padding-top: 1em;
+}
+
+.btn {
+    @include button;
+}
+
+//
+// Selected / Active states
+//
+
+.selected, .active {
+  color: $white;
+  background: $background-knmiblue;
+}
+input, select {
+  &.active, &.selected {
+    background: $input-background-focus;
+    color: $input-color;
+    border: $input-border-focus;
+    box-shadow: $input-shadow-focus;
+  }
+}
+table th a.active {
+  color: #000;
+  background: none;
+  text-decoration: none;
+  &.up:after {
+    content: ' ▴'
+  }
+  &.down:after {
+    content: ' ▾'
+  }
+}
+
+.properties {
+  color: $dark-grey;
+  padding: 0 0 0 0;
+  p {
+    padding: 0;
+    margin: 0;
+  }
+}
+.result .properties {
+  font-size: 0.87em;
+}
+
+.control.right {
+  float: right;
+  label {
+    select {
+      width: auto
+    }
+  }
+}
+
+// TODO: merge with dropdown style
+
+$tooltipBackground: $white;
+$tooltipForeground: $off-black;
+$tooltipBorder: $line-grey;
+$tipHeight: 0.5em;
+$fontSize: 0.8em;
+
+.tooltipped {
+  position: relative;
+  cursor: pointer;
+
+  border: 1px solid $tooltipBorder;
+  padding: 0 1px;
+  display: inline;
+  border-radius: 3px;
+
+
+  .reacttooltip {
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+   // max-width: 62%;
+    min-width: 250px;
+    display: block;
+    position: absolute;
+    top: 1.45em;
+    background: $tooltipBackground;
+    padding: 0.5em 1em 0;
+    font-size: $fontSize;
+    color: $tooltipForeground;
+    font-weight: normal;
+    border: 1px solid $tooltipBorder;
+    z-index: 100;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      top: -3px;
+      transform: rotate(45deg);
+      background: $tooltipBackground;
+      height: $tipHeight*1.3;
+      width: $tipHeight*1.3;
+      box-shadow: -1.5px -1.5px 0px $tooltipBorder;
+      //border: 5px solid $tooltipBackground;
+      //border-width: 0px 6px $tipHeight*1.3;
+      //border-color: $tooltipBackground  transparent $tooltipBackground transparent ;
+    }
+
+  }
+
+  .reacttooltip {
+    display: none;
+  }
+  .reacttooltip:focus {
+    display: block;
+  }
+
+  &:hover, &:focus {
+    outline: 0 none;
+    .reacttooltip {
+      display: block;
+    }
+  }
+}
+
