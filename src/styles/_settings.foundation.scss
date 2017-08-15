@@ -205,7 +205,7 @@ $anchor-color: $primary-color;
 //// 7. Accordion
 //// ------------
 
-//$accordion-background: $white;
+$accordion-background: $white;
 //$accordion-plusminus: true;
 $accordion-item-color: foreground($accordion-background, $primary-color);
 //$accordion-item-background-hover: $light-gray;
@@ -511,7 +511,7 @@ $table-foot-background: $background-lightgrey;
 //// --------
 
 //$tab-margin: 0;
-//$tab-background: $white;
+$tab-background: $white;
 //$tab-background-active: $light-gray;
 //$tab-border: $light-gray;
 $tab-item-color: foreground($tab-background, $primary-color);

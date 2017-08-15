@@ -1,0 +1,19 @@
+header {
+  img.logo {
+    float: left;
+    @include breakpoint(medium) {
+      margin-left: 50%;
+      margin-left: calc( 50% - 22px);
+    }
+
+    width: 230px;
+    margin-top: -65px;
+    margin-bottom: 7px;
+  }
+  &.search {
+    border-bottom: 3px solid $line-grey;
+    padding-bottom: 0em;
+    margin-bottom: 1.2em;
+  }
+  
+}

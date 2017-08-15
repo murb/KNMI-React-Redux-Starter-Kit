@@ -1,0 +1,42 @@
+.react-tabs {
+  float: left;
+  width: 100%;
+  margin-bottom: 2em;
+  .header {
+    border-bottom: 1px solid $line-grey;
+    float: left;
+    width: 100%;
+    ul {
+      width: 100%;
+      list-style: none;
+      margin: 0;
+      padding:0;
+      float: left;
+      li {
+        float: left;
+        padding: 5px 1.2em;
+        margin: 0 0 -1px 0;
+        background: $background;
+        font-size: 1.22em;
+        &.selected {
+          border: 1px solid $line-grey;
+          border-bottom: 1px solid $active-tab-background;
+          background: $active-tab-background;
+        }
+      }
+    }
+  }
+  .tab-content {
+    background: $active-tab-background;
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid $line-grey;
+    padding: 0.825em 0;
+    table {
+      width: 100%;
+    }
+    .react-tab.hidden {
+      display: none;
+    }
+  }
+}

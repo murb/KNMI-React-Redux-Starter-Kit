@@ -86,3 +86,9 @@ button strong {
   font-size: 1.25em;
 }
 
+a {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}

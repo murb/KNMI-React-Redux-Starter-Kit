@@ -1,0 +1,22 @@
+.callout {
+    background: $background-lightgrey;
+    padding: $global-padding $global-padding $global-padding $global-padding*4;
+    position: relative;
+    margin-bottom: 1em;
+  
+    p:last-child {
+      margin-bottom: 0
+    }
+  
+    @each $name, $color in $foundation-palette {
+      &.#{$name}:before {
+        content: ' ';
+        position: absolute;
+        width: $global-padding*3;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $color;
+      }
+    }
+  }

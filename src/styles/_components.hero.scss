@@ -1,0 +1,14 @@
+@include foundation-grid;
+
+.hero {
+    @include grid-row($behavior: false);
+    font-size: 1.2em;
+    text-align: center;
+    padding: 6% 8.3%;
+    max-width: $knmi-width;
+    margin-bottom: 2em;
+    &.secondary {
+      text-align: left;
+      padding: 3% 8.3%;
+    }
+  }

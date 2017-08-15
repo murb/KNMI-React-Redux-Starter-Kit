@@ -1,0 +1,16 @@
+.breadcrumbs {
+  li:not(:last-child)::after {
+    color: $breadcrumb-grey;
+    content: "›";
+    font-size: 1.2em;
+    line-height: 1em;
+    font-weight: bold;
+    margin: 0px 0.75rem;
+    position: relative;
+    top: 1px;
+    opacity: 1;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}

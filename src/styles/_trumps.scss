@@ -1,0 +1,21 @@
+
+.max-width, .full-width {
+  width: 100%!important;
+}
+  
+.absolute-top {
+  position: absolute!important;
+  top: 0!important;
+  z-index: -1;
+}
+
+.capitalize {
+  text-transform: capitalize!important;
+}
+
+.hide-overflow-with-ellipsis {
+  overflow: hidden!important;
+  text-overflow: ellipsis!important;
+  display: block!important;
+  width: 100%;
+}

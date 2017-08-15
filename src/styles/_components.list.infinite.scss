@@ -1,0 +1,40 @@
+.list.infinite {
+    max-height: 22em;
+    border-bottom: 1px solid $line-grey;
+    background-image: linear-gradient(to top, $line-grey 0px, white 3px, white);
+    margin-bottom: 0.5em;
+    &.finished {
+      background-image: none;
+    }
+    overflow: auto;
+    table {
+      position: relative;
+      width: 100%;
+      td {
+        max-width: 20em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      tfoot {
+        display: block;
+        z-index: 5;
+        tr {
+          width: 100%;
+          display: block;
+  
+          th {
+            float: left;
+            display: block;
+          }
+        }
+        background: $background-lightgrey;
+        width: 100%;
+        display: table-footer-group;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+  
+      }
+    }
+  }
+  

@@ -1,43 +1,24 @@
 /* - */
-
-@import 'base';
-@import 'fonts';
 @import '~foundation/foundation';
-@import 'foundation-settings';
 
-@import 'component_specific/select.scss';
+@import 'settings.fonts.scss';
+@import 'settings.knmi.scss';
+@import 'settings.foundation.scss';
 
-@import 'oo_containers';
-@import 'oo_content';
-@import 'oo_skin';
-@import 'oo_structure';
+@import 'elements.scss';
 
-@import 'html-elements';
-@import 'calendar';
+@import 'objects.panel.scss';
 
+@import 'components.aside.scss';
+@import 'components.breadcrumbs.scss';
+@import 'components.callout.scss';
+@import 'components.forms.scss';
+@import 'components.header.scss';
+@import 'components.hero.scss';
+@import 'components.list.infinite.scss';
+@import 'components.pagehead.scss';
+@import 'components.tabs.scss';
+@import 'components.top-bar.scss';
+@import 'components.user-area.scss';
 
-.user-area {
-  float: right;
-  font-size: 14px;
-  margin-top: 2em;
-
-  .user-menu {
-
-    ul {
-      list-style: none;
-    }
-  }
-}
-
-.promote {
-  font-family: 'RijksSerif', Times, Serif;
-  font-size: 1.125em;
-  margin: 1em 0;
-}
-
-.show_no_longer_candidate {
-  display: none;
-}
-
-
-
+@import 'trumps.scss';
